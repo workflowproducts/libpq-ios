@@ -3,6 +3,16 @@
 set -e
 
 VERSION=9.6.2
+IOS=11.3
+
+DEVROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer
+SDKROOT=$DEVROOT/SDKs/iPhoneOS${IOS}.sdk
+
+if [ ! -e "$SDKROOT" ]
+then
+    echo "The iOS SDK ${IOS} doesn't exist, please edit this file and fix the IOS= variable at the top."
+    exit 1
+fi
 
 if [ ! -e "postgresql-$VERSION" ]
 then
@@ -23,20 +33,20 @@ chmod u+x ./configure
 ###############################
 
 DEVROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer
-SDKROOT=$DEVROOT/SDKs/iPhoneSimulator10.3.sdk
+SDKROOT=$DEVROOT/SDKs/iPhoneSimulator${IOS}.sdk
 
 #Build iPhone Simulator library
 ./configure --host=i386-apple-darwin --without-readline \
   CC="/usr/bin/gcc" \
   CPPFLAGS="-I$SDKROOT/usr/include/" \
-  CFLAGS="$CPPFLAGS -miphoneos-version-min=10.3 -pipe -no-cpp-precomp -isysroot $SDKROOT" \
+  CFLAGS="$CPPFLAGS -miphoneos-version-min=${IOS} -pipe -no-cpp-precomp -isysroot $SDKROOT" \
   CPP="/usr/bin/cpp $CPPFLAGS" \
   LD=$DEVROOT/usr/bin/ld
 make -C src/interfaces/libpq
 cp src/interfaces/libpq/libpq.a ./libpq_i386.a
 
 DEVROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer
-SDKROOT=$DEVROOT/SDKs/iPhoneOS10.3.sdk
+SDKROOT=$DEVROOT/SDKs/iPhoneOS${IOS}.sdk
 
 #Build ARMv7s library
 make -C src/interfaces/libpq distclean
