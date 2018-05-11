@@ -2,3 +2,4 @@
 postgresql-*
 *.a
 xcuserdata
+libressl-*

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB4E4B2620A3AF8800C522F6 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4E4B2420A3AF8800C522F6 /* libcrypto.a */; };
+		AB4E4B2720A3AF8800C522F6 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB4E4B2520A3AF8800C522F6 /* libssl.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		AB78517A1E9FB7A50016E707 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7851791E9FB7A50016E707 /* main.m */; };
 		AB78517D1E9FB7A60016E707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB78517C1E9FB7A60016E707 /* AppDelegate.m */; };
 		AB7851801E9FB7A60016E707 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB78517F1E9FB7A60016E707 /* ViewController.m */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB4E4B2420A3AF8800C522F6 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = SOURCE_ROOT; };
+		AB4E4B2520A3AF8800C522F6 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = SOURCE_ROOT; };
 		AB7851751E9FB7A50016E707 /* libpq-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "libpq-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7851791E9FB7A50016E707 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB78517B1E9FB7A60016E707 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4E4B2620A3AF8800C522F6 /* libcrypto.a in Frameworks */,
+				AB4E4B2720A3AF8800C522F6 /* libssl.a in Frameworks */,
 				BFAA54981EA025F600E8A669 /* libpq.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +75,8 @@
 				AB7851841E9FB7A60016E707 /* Assets.xcassets */,
 				AB7851861E9FB7A60016E707 /* LaunchScreen.storyboard */,
 				AB7851891E9FB7A60016E707 /* Info.plist */,
+				AB4E4B2420A3AF8800C522F6 /* libcrypto.a */,
+				AB4E4B2520A3AF8800C522F6 /* libssl.a */,
 				BFAA54971EA025F600E8A669 /* libpq.a */,
 				AB7851781E9FB7A50016E707 /* Supporting Files */,
 			);
