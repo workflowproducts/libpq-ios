@@ -103,7 +103,7 @@ cp ssl/.libs/libssl.a ./libssl_arm64.a
 lipo -create ./libcrypto_i386.a ./libcrypto_armv7s.a ./libcrypto_arm64.a -output ./libcrypto.a
 lipo -create ./libssl_i386.a ./libssl_armv7s.a ./libssl_arm64.a -output ./libssl.a
 
-// put them where the Xcode project will find them
+# put them where the Xcode project will find them
 cp ./libcrypto.a ./libssl.a ../libpq-test/
 
 cd ..
