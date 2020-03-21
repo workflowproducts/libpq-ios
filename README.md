@@ -1,5 +1,5 @@
 # libpq on iOS
-A script to compile libpq for iOS 10.3
+A script to compile libpq for iOS 13.2
 
 Instructions:
 1. Clone:
