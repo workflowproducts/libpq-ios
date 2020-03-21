@@ -12,5 +12,4 @@ cd libpq-ios
 ./libpq-ios.sh
 ```
 
-The resulting library (`postgresql-9.6.2/libpq.a`) will work run in the simulator, and all devices that support iOS 10.
-At this time, the script is hard-coded to build for iOS 10.3, this requires a computer with macOS 10.12 Sierra and Xcode 8.3.
+The resulting library (`postgresql-12.2/libpq.a`) will run natively on iOS 13.2, and there is some commented, and untested, code for the simulator as well.
